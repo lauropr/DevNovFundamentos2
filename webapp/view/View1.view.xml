@@ -1,0 +1,38 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="demo.fundamentos.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <form:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Dados Pessoais"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false">
+                <form:content>
+                    <Label text="Nome" />
+                    <Text text="{/nome}" /> <!--O binding precisa do nome do modelo (sem nome nesse caso) e a / para indicar
+                                                a raíz do caminho-->
+                    <Label text="Sobrenome" />
+                    <Text text="{/sobrenome}" />
+                    <Label text="Idade" />
+                    <Text text="{/idade}" />
+                    <Label text="Nacionalidade" />
+                    <Text text="{/nacionalidade}" />
+                </form:content>
+		    </form:SimpleForm>        
+        </content> 
+    </Page>
+</mvc:View>
