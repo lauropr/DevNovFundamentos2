@@ -32,7 +32,37 @@
                     <Label text="Nacionalidade" />
                     <Text text="{/nacionalidade}" />
                 </form:content>
-		    </form:SimpleForm>        
+		    </form:SimpleForm>
+
+            <!--Passando o nome do modelo "estados", a notação ">" e o caminho dos itens "/valores"-->
+                <!--omitindo a tag items pois ela é default-->
+            <List items="{estados>/valores}"
+                  headerText="{i18n>Estados}" >  
+                <StandardListItem 
+                    title="{estados>nome}"
+                    info="{estados>abrev}" />
+            </List>
+
+            <Table  mode="SingleSelectMaster"
+                    items="{estados>/valores}">
+                <columns>
+                    <Column>
+                        <!-- omitindo a agregação header pois ela é default-->
+                        <Text text="{i18n>Estado}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>Abreviacao}"/>                        
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <!--omitindo a agregação cells pois ela é default-->
+                        <Text text="{estados>nome}" />
+                        <Text text="{estados>abrev}" />
+                    </ColumnListItem>
+                </items>
+            </Table>
+
         </content> 
     </Page>
 </mvc:View>
