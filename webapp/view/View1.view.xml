@@ -43,8 +43,11 @@
                     info="{estados>abrev}" />
             </List>
 
-            <Table  mode="SingleSelectMaster"
-                    items="{estados>/valores}">
+            <!--Propriedades, agregações e eventos vão na tag de declaração-->
+            <Table  mode="SingleSelectMaster"             
+                    items="{estados>/valores}"
+                    itemPress="aoClicarItem"
+                    >
                 <columns>
                     <Column>
                         <!-- omitindo a agregação header pois ela é default-->
@@ -55,7 +58,7 @@
                     </Column>
                 </columns>
                 <items>
-                    <ColumnListItem>
+                    <ColumnListItem type="Navigation">
                         <!--omitindo a agregação cells pois ela é default-->
                         <Text text="{estados>nome}" />
                         <Text text="{estados>abrev}" />

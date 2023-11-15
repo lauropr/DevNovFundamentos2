@@ -99,6 +99,13 @@
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name": "DetalheDoEstado",
+          "pattern": "estado/{estado}",
+          "target": [
+            "ViewEstado"
+          ]
         }
       ],
       "targets": {
@@ -108,6 +115,13 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "ViewEstado": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2"
         }
       }
     },

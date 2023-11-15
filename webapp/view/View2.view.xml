@@ -1,0 +1,36 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="demo.fundamentos.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    <Page id="page" title="{i18n>DetalhesDoEstado}">
+
+        <form:SimpleForm id="detalhesEstado"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        adjustLabelSpan="false"
+        emptySpanXL="4"
+        emptySpanL="4"
+        emptySpanM="4"
+        emptySpanS="0"
+        columnsXL="1"
+        columnsL="1"
+        columnsM="1"
+        singleContainerFullSize="false">
+            <form:content>
+                <Label text="Estado" />
+                <Text text="" /> <!--O binding precisa do nome do modelo (sem nome nesse caso) e a / para indicar                                            a raíz do caminho-->
+                <Label text="Abreviação" />
+                <Text text="" />
+            </form:content>
+        </form:SimpleForm>
+
+
+
+
+
+    </Page>
+</mvc:View>

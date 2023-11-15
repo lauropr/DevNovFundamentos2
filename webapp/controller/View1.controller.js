@@ -49,6 +49,26 @@ sap.ui.define([
             },
 
             onBeforeRendering: function(){
+            },
+
+            aoClicarItem: function(oEvent){
+
+                //acessa o caminho no modelo para o item que disparou o evento (contexto de vínculo)
+                var sCaminho = oEvent.getParameters().listItem.getBindingContext("estados").getPath();
+                //acessa o modelo estados passando o caminho encontrado acima
+                var oEstado2 = this.getView().getModel("estados").getProperty(sCaminho);
+
+                //resgata o objeto no modelo do item que foi clicado (contexto de vínculo)
+                var oEstado = oEvent.getParameters().listItem.getBindingContext("estados").getObject();                                
+
+                //resgata a instância roteadora
+                var oRoteador = this.getOwnerComponent().getRouter();
+
+                oRoteador.navTo("DetalheDoEstado", {
+                    estado: oEstado.abrev
+                });                
             }
+
+
         });
     });
